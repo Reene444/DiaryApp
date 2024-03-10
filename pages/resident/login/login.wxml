@@ -1,0 +1,26 @@
+<!--pages/admin/login/index.wxml-->
+<view class="father">
+  <image class="bg" src="../../../img/resident/bg_login.png"></image>
+  <view class="title">Resident Login</view>
+  <view class="field">
+  <van-cell-group inset>
+    <van-field
+      style="height: 30px;"
+      placeholder="please enter the mobile number"
+      border="{{ false }}"
+      label="phone number"
+      bind:change="getPhone"
+    />
+    <van-field password
+      placeholder="password"
+      border="{{ false }}"
+      label="password"
+      bind:change="getPassword"
+    />
+  </van-cell-group>
+  </view>
+  <view class="bt_login">
+  <van-button bindtap="onclick" color="#FFC65B" block>登录</van-button>
+  </view>
+  <van-toast id="van-toast"/>
+</view>

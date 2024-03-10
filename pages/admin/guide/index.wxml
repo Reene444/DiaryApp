@@ -1,0 +1,13 @@
+<image class="bg" src="../../../img/admin/bg_login.png"></image>
+<view class="btg">
+<view class="bt">
+<van-button bindtap="to_main" color="#63C6FF" icon="apps-o" size="large">
+<text style="font-weight: 500;font-size: large;">事务处理</text>
+</van-button>
+</view>
+<view class="bt">
+<van-button bindtap="to_manager" color="#63C6FF" icon="bar-chart-o" size="large">
+<text style="font-weight: 500;font-size: large;">数据管理</text>
+</van-button>
+</view>
+</view>

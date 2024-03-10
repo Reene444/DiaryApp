@@ -1,0 +1,9 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{actList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.description}}" is-link link-type="navigateTo"
+    url="../act_info/index?act_id={{item._id}}">
+    <van-tag color="#9edafd" wx:if="{{item.scale=='小型'}}">小型</van-tag>
+    <van-tag color="#63C6FF" wx:if="{{item.scale=='中型'}}">中型</van-tag>
+    <van-tag type="primary" wx:if="{{item.scale=='大型'}}">大型</van-tag>
+  </van-cell>
+</block>

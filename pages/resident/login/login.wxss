@@ -1,0 +1,38 @@
+Page{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.title{
+  margin-top: 240rpx;
+  font-family: NSimSun;
+  font-size: 48rpx;
+}
+
+.field{
+  margin-top: 160rpx;
+  width: 580rpx;
+}
+
+.bt_login{
+  margin-top: 200rpx;
+  width: 36vw;
+}

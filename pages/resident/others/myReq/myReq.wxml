@@ -1,0 +1,24 @@
+<van-search value="{{ value }}" class="search" placeholder="请输入搜索关键词"/>
+
+  <view class="top">
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#FFC65B">
+  <van-tab title="我发布的">
+    <block wx:for="{{reqList}}" wx:key="index">
+      <van-cell title="{{item.title}}" label="{{item.time}}" 
+      data-index="{{index}}" bindtap="gotoReq">{{item.state}}
+      <van-tag color="#FFC65B" wx:if="{{item.state=='帮助确认中'}}">等待确认</van-tag>
+      <van-tag color="#FFC65B" wx:if="{{item.state=='结果确认中'}}">等待确认</van-tag>
+      </van-cell>
+    </block>
+  </van-tab>
+  <van-tab title="我帮助的">
+<block wx:for="{{reqList}}" wx:key="index">
+  <van-cell title="{{item.req[0].title}}" label="{{item.req[0].time}}"
+   data-index="{{index}}" bindtap="gotoReq">{{item.req[0].state}}
+   <van-tag color="#FFC65B" wx:if="{{item.req[0].state=='准备中'}}">等待开始</van-tag>
+   <van-tag color="#FFC65B" wx:if="{{item.req[0].state=='交易核对中'}}">等待核对</van-tag>
+</van-cell>
+</block>
+  </van-tab>
+</van-tabs>
+</view>

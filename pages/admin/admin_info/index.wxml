@@ -1,0 +1,60 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      value="{{ adm_id }}"
+      label="编号"
+      type="textarea"
+      autosize
+      readonly
+      input-align="center"
+      size="large"
+    />
+    <van-field
+    bind:input="updatePhone"
+    value="{{ adm_phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    input-align="center"
+    size="large"
+    />
+    <van-field
+      bind:input="updatePsw"
+      value="{{ adm_password }}"
+      label="密码"
+      placeholder="请输入密码"
+      input-align="center"
+      size="large"
+    />
+    <van-field
+      bind:input="updateName"
+      value="{{ adm_name }}"
+      label="姓名"
+      placeholder="请输入姓名"
+      input-align="center"
+      size="large"
+    />
+    <van-cell title="性别" size="large">
+    <van-radio-group
+     bind:change="updateGender"
+      name="性别"
+      value="{{adm_gender}}"
+      direction="horizontal"
+    >
+    <van-radio name="0" style="margin-right: 14rpx;">男</van-radio>
+    <van-radio name="1">女</van-radio>
+  </van-radio-group>
+</van-cell>
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">修改</van-button>
+  </view>
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">删除</van-button>
+  </view>
+</view>

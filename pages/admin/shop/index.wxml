@@ -1,0 +1,24 @@
+<view class="father">
+<image class="bg" src="../../../img/admin/bg_login.png"></image>
+<image class="ig" src="../../../img/admin/shop.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-cell
+      title-width="3em"
+      title="初级\n请求卡">
+      <van-stepper value="{{ primary_card }}" bind:change="updateP" integer="{{true}}"/>馨币</van-cell>
+      <van-cell
+      title-width="3em"
+      title="中级\n请求卡">
+      <van-stepper value="{{ middle_card }}" bind:change="updateM" integer="{{true}}"/>馨币</van-cell>
+      <van-cell
+      title-width="3em"
+      title="高级\n请求卡">
+      <van-stepper value="{{ advanced_card }}" bind:change="updateA" integer="{{true}}"/>馨币</van-cell>
+  </van-cell-group>
+</view>
+<view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">确认修改</van-button>
+</view>
+</view>
+

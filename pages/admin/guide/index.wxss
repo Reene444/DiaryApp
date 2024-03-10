@@ -1,0 +1,56 @@
+Page{
+  width: 100%;
+  height: 100%;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+  background-size:cover;
+  position: fixed;
+}
+
+.btg{
+  margin-top: 40%;
+}
+
+.bt{
+  padding: 80rpx;
+}
+
+.bt2{
+  margin-top: 100rpx;
+  display: flex;
+  width: 400rpx;
+  height: 100%;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+  padding: 10rpx;
+  border: 3rpx solid #faca82;
+	border-radius: 10rpx;
+}
+
+.img1{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.img2{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.tx1{
+  font-size: 2rem;
+}
+
+.tx2{
+  font-size: 2rem;
+}

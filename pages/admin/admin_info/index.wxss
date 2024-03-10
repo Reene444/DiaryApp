@@ -1,0 +1,43 @@
+Page{
+  width: 100%;
+  height: 100%;
+}
+
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.list{
+  margin-top: 200rpx;
+}
+
+.bt1{
+  margin-top: 100rpx;
+  flex:2;
+}
+
+.bt2{
+  margin-top: 40rpx;
+  flex:3;
+}
+
+.bt_gp{
+  width: 360rpx;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}

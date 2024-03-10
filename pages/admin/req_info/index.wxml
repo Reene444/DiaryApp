@@ -1,0 +1,126 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateTitle"
+      value="{{ title }}"
+      label="请求标题"
+      placeholder="请输入标题"
+      maxlength="20"
+      title-width="5em"
+      show-word-limit
+      autosize
+    />
+    <van-field
+      value="{{ petitioner }}"
+      label="请求人"
+      readonly
+      title-width="5em"
+    />
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateContent"
+      type="textarea"
+      show-word-limit
+      maxlength="500"
+      title-width="5em"
+      autosize
+      value="{{ content }}"
+      label="请求内容"
+      placeholder="请输入内容"
+    /></view>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateTimeLimit"
+      type="textarea"
+      show-word-limit
+      maxlength="50"
+      title-width="5em"
+      autosize
+      value="{{ time_limit }}"
+      label="时间限制"
+      placeholder="请输入时间限制"
+    /></view>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateDemand"
+      type="textarea"
+      show-word-limit
+      maxlength="200"
+      title-width="5em"
+      autosize
+      value="{{ demand }}"
+      label="具体要求"
+      placeholder="请输入具体要求"
+    /></view>
+    <van-cell title="等级" title-width="5em">
+      <van-radio-group
+     bind:change="updateLevel"
+      name="等级"
+      value="{{level}}"
+      direction="horizontal"
+    >
+    <van-radio name="初级" style="margin-bottom: 16rpx;">初级请求</van-radio>
+    <van-radio name="中级" style="margin-bottom: 16rpx;">中级请求</van-radio>
+    <van-radio name="高级" style="margin-bottom: 16rpx;">高级请求</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-cell title="紧急程度" title-width="5em">
+      <van-radio-group
+     bind:change="updateisUrgent"
+      name="紧急程度"
+      value="{{isUrgent}}"
+      direction="horizontal"
+    >
+    <van-radio name="{{true}}" style="margin-bottom: 16rpx;">紧急</van-radio>
+    <van-radio name="{{false}}" style="margin-bottom: 16rpx;">不紧急</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-cell title="类型" title-width="5em">
+      <van-radio-group
+     bind:change="updateType"
+      name="类型"
+      value="{{type}}"
+      direction="horizontal"
+      >
+    <van-radio name="家政服务" style="margin-bottom: 16rpx;">家政服务</van-radio>
+    <van-radio name="教学活动" style="margin-bottom: 16rpx;">教学活动</van-radio>
+    <van-radio name="协助管理" style="margin-bottom: 16rpx;">协助管理</van-radio>
+    <van-radio name="装配维修" style="margin-bottom: 16rpx;">装配维修</van-radio>
+    <van-radio name="物件取送" style="margin-bottom: 16rpx;">物件取送</van-radio>
+    <van-radio name="信息宣传" style="margin-bottom: 16rpx;">信息宣传</van-radio>
+    <van-radio name="其他">其他</van-radio>
+      </van-radio-group>
+    </van-cell>
+    <van-cell title="结算方式" title-width="5em">
+    <van-radio-group
+     bind:change="updateSettle"
+      name="结算方式"
+      value="{{settle_way}}"
+      direction="horizontal"
+    >
+    <van-radio name="时长" style="margin-bottom: 16rpx;">时长计费</van-radio>
+    <van-radio name="单次">单次计费</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field
+      bind:input="updateAmount"
+      label="基础馨币"
+      placeholder="请输入基础馨币"
+      title-width="5em"
+      value="{{amount}}"
+    />
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">删除</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">修改</van-button>
+  </view>
+
+</view>

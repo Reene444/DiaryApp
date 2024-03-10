@@ -1,0 +1,13 @@
+<!--pages/resident/others/myinfro/myinfro.wxml-->
+<van-cell-group inset>
+  <!-- <van-cell title="头像"  is-link value="内容" link-type="navigateTo" url="/pages/resident/others/account/password/password"/> -->
+  <van-cell title="姓名" value="{{userinfro.name}}"/>
+  <van-cell title="性别" value="{{userinfro.gender}}"/>
+  <van-cell title="生日" value="{{userinfro.birthday}}"/>
+  <van-cell title="手机号" value="{{userinfro.phone}}"  />
+  <van-cell title="诚信分" value="{{userinfro.credit_score}}" />
+  <van-cell title="馨币" value="{{userinfro.amount}}" />
+  <van-cell title="初级请求卡" value="{{userinfro.cards.primary_card}}"  />
+  <van-cell title="中级请求卡" value="{{userinfro.cards.middle_card}}"  />
+  <van-cell title="高级请求卡" value="{{userinfro.cards.advanced_card}}"  />
+</van-cell-group>

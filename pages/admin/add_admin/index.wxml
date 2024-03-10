@@ -1,0 +1,42 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+    bind:input="addPhone"
+    label="手机号"
+    placeholder="请输入手机号"
+    input-align="center"
+    size="large"
+  />
+    <van-field
+      bind:input="addPsw"
+      password
+      label="密码"
+      placeholder="请输入密码"
+      input-align="center"
+      size="large"
+    />
+    <van-field
+      bind:input="addName"
+      label="姓名"
+      placeholder="请输入姓名"
+      input-align="center"
+      size="large"
+    />
+    <van-cell title="性别" size="large">
+    <van-radio-group
+     bind:change="addGender"
+      name="性别"
+      direction="horizontal"
+    >
+    <van-radio name="0" style="margin-right: 14rpx;">男</van-radio>
+    <van-radio name="1">女</van-radio>
+  </van-radio-group>
+</van-cell>
+  </van-cell-group>
+</view>
+  <view style="width: 400rpx;margin-top: 80rpx;">
+  <van-button class="bt" bindtap="addData" color="#FFC65B" size="large">确认添加</van-button>
+  </view>
+</view>

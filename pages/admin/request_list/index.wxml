@@ -1,0 +1,10 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{reqList}}" wx:key="index">
+  <van-cell title="{{item.title}}" label="{{item.content}}" is-link link-type="navigateTo"
+    url="../req_info/index?req_id={{item._id}}">
+    <van-tag color="#9edafd" wx:if="{{item.level=='初级'}}">初级</van-tag>
+    <van-tag color="#63C6FF" wx:if="{{item.level=='中级'}}">中级</van-tag>
+    <van-tag type="primary" wx:if="{{item.level=='高级'&&item.isUrgent==false}}">高级</van-tag>
+    <van-tag color="#FFC65B" wx:if="{{item.level=='高级'&&item.isUrgent==true}}">紧急</van-tag>
+  </van-cell>
+</block>

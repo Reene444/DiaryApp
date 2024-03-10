@@ -1,0 +1,109 @@
+{
+   "setting": {
+      "compileHotReLoad": true
+   },
+   "condition": {
+      "miniprogram": {
+         "list": [
+            {
+               "name": "时馨商店",
+               "pathName": "pages/admin/shop/index",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "信息管理",
+               "pathName": "pages/admin/management/index",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "事务处理",
+               "pathName": "pages/admin/main/index",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民",
+               "pathName": "pages/resident/request/request",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民-公告",
+               "pathName": "pages/resident/announce/announce",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民-活动",
+               "pathName": "pages/resident/activity/activity",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民-个人信息",
+               "pathName": "pages/resident/others/others",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民-账号管理",
+               "pathName": "pages/resident/others/account/account",
+               "query": "",
+               "scene": null
+            },
+            {
+               "name": "居民-互助请求",
+               "pathName": "pages/resident/request/request",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "qq",
+               "pathName": "pages/resident/helpRecord/helpRecord",
+               "query": "req_id=5b049cc8621dc7ef0eca868216006359",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "确认结果",
+               "pathName": "pages/resident/checkHelp/checkHelp",
+               "query": "help_id=54ad1eea6227bfff150bd5721e1c76fe",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "提交物品",
+               "pathName": "pages/resident/postObj/postObj",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "管理员物品详情",
+               "pathName": "pages/admin/obj_info/index",
+               "query": "obj_id=807102f66241b25d026cdd0e45397755",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "商店",
+               "pathName": "pages/resident/others/shop/shop",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            },
+            {
+               "name": "Login",
+               "pathName": "pages/main/main",
+               "query": "",
+               "launchMode": "default",
+               "scene": null
+            }
+         ]
+      }
+   },
+   "projectname": "%E6%BA%90%E7%A8%8B%E5%BA%8F"
+}

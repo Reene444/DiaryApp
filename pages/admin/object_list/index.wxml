@@ -1,0 +1,8 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{objList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.description}}" is-link link-type="navigateTo"
+    url="../obj_info/index?obj_id={{item._id}}">
+    <van-tag color="#FFC65B" wx:if="{{item.trading=='馨币'}}">馨币</van-tag>
+    <van-tag color="#63C6FF" wx:if="{{item.trading=='现金'}}">现金</van-tag>
+  </van-cell>
+</block>

@@ -1,0 +1,126 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <view wx:if="{{com.type=='建议'}}">
+    <van-cell-group inset>
+      <van-field
+      value="{{ com.resident }}"
+      label="建议人"
+      input-align="center"
+      readonly
+      />
+      <van-field
+        value="{{ com.content }}"
+        label="意见内容"
+        type="textarea"
+        title-width="6em"
+        autosize
+        readonly
+      />
+    </van-cell-group>
+  </view>
+
+  <view wx:if="{{com.type=='集市'}}">
+    <van-cell-group inset>
+      <van-field
+      value="{{ com.resident }}"
+      label="买方"
+      readonly
+      />
+      <van-field
+      value="{{ obj._id }}"
+      label="物品id"
+      type="textarea"
+      autosize
+      readonly
+      />
+      <van-field
+      value="{{ obj.name }}"
+      label="物品名"
+      readonly
+      />
+      <van-field
+        value="{{ obj.description }}"
+        label="物品描述"
+        type="textarea"
+        title-width="6em"
+        autosize
+        readonly
+      />
+      <van-field
+        value="{{ obj.seller_phone }}"
+        label="卖方手机号"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+        value="{{ obj.time }}"
+        label="取货时间"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+        value="{{ obj.location }}"
+        label="取货地点"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+        value="{{ obj.type }}"
+        label="类型"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+        value="{{ obj.trading }}"
+        label="交易方式"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+        value="{{ obj.amount }}"
+        label="价格"
+        title-width="6em"
+        readonly
+      />
+      <van-field
+      value="{{ obj.state }}"
+        label="物品状态"
+        title-width="6em"
+        readonly
+      />
+    </van-cell-group>
+  </view>
+
+  <view wx:if="{{com.ischecked}}" style="margin-top: 40rpx;">
+  <van-cell-group inset>
+    <van-field
+      value="{{ com.reply }}"
+      label="回复"
+      type="textarea"
+      title-width="6em"
+      autosize
+      readonly
+    />
+  </van-cell-group>
+  </view>
+
+  <view wx:if="{{com.ischecked==false}}" style="margin-top: 40rpx;">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateReply"
+      value="{{ com.reply }}"
+      label="回复"
+      placeholder="请填入回复内容"
+      type="textarea"
+      title-width="6em"
+      autosize
+    />
+  </van-cell-group>
+  </view>
+</view>
+<view class="bt_gp" wx:if="{{com.ischecked==false}}">
+  <van-button bindtap="updateData"  color="#FFC65B" size="large">确认</van-button>
+</view>
+</view>
+

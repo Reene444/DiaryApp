@@ -1,0 +1,21 @@
+<view class="father">
+<image class="bg" src="../../../../img/resident/bg_login.png"></image>
+<image class="ig" src="../../../../img/resident/mysug.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+    placeholder="请填写您对社区的意见与建议"
+    bind:change="updateSug"
+    maxlength="600"
+    title-width="0em"
+    show-word-limit
+    type="textarea"
+    autosize
+  />
+  </van-cell-group>
+</view>
+<view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">确认提交</van-button>
+</view>
+</view>
+

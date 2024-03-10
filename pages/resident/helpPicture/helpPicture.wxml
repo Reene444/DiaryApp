@@ -1,0 +1,16 @@
+<view class="father">
+
+<image class="bg" src="../../../img/resident/bg_login.png"></image>
+
+  <view>
+  <van-uploader
+  file-list="{{ fileList }}" bind:after-read="afterRead" deletable="{{false}}" max-count="{{2}}"
+  preview-size="110px"
+  />
+  </view>
+
+<view class="bt1">
+  <van-button bindtap="addPicture" color="#FFC65B" size="large">上传证明图片</van-button>
+  </view>
+  
+</view>

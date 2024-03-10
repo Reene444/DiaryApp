@@ -1,0 +1,37 @@
+<view class="father">
+<image class="bg" src="../../../img/admin/bg_login.png"></image>
+<image class="ig" src="../../../img/admin/add_account.png"></image>
+  <view class="list">
+  <view style="margin-bottom: 20rpx;">
+    <van-cell-group inset>
+  <view style="word-break: break-all;">
+    <van-field
+      readonly
+      value="{{ origin_amount }}"
+      label="现有资金"
+    /></view>
+  </van-cell-group>
+</view>
+  <van-cell-group inset>
+  <view style="word-break: break-all;">
+    <van-field
+      bind:input="addEvent"
+      type="textarea"
+      title-width="5em"
+      autosize
+      label="事件"
+      placeholder="请输入增加资金的事由简述"
+    /></view>
+    <van-field
+      bind:input="addAmount"
+      label="金额"
+      placeholder="请输入增加的资金金额"
+      title-width="5em"
+    />
+  </van-cell-group>
+</view>
+<view class="bt1">
+  <van-button bindtap="addData" color="#FFC65B" size="large">存入资金</van-button>
+</view>
+</view>
+

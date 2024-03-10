@@ -1,0 +1,111 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+    value="{{ res_id }}"
+    label="编号"
+    input-align="center"
+    readonly
+    type="textarea"
+    autosize
+    />
+    <van-field
+    bind:input="updatePhone"
+    value="{{ res_phone }}"
+    label="手机号"
+    input-align="center"
+    size="large"
+    readonly
+    />
+    <van-field
+      bind:input="updatePsw"
+      value="{{ res_password }}"
+      label="密码"
+      placeholder="请输入密码"
+      input-align="center"
+      size="large"
+    />
+    <van-field
+      bind:input="updateName"
+      value="{{ res_name }}"
+      label="姓名"
+      placeholder="请输入姓名"
+      input-align="center"
+      size="large"
+    />
+    <van-cell title="性别" size="large">
+    <van-radio-group
+     bind:change="updateGender"
+      name="性别"
+      value="{{res_gender}}"
+      direction="horizontal"
+    >
+    <van-radio name="男" style="margin-right: 14rpx;">男</van-radio>
+    <van-radio name="女">女</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-cell title="出生日期">
+    <picker mode="date" value="{{res_birthday}}" end="{{end}}" bindchange="updateBirthday">
+      <view style="margin-right: 90rpx">
+        {{ res_birthday }}
+      </view>
+    </picker>
+    </van-cell>
+    <van-field
+      bind:input="updateCredit"
+      value="{{ res_credit_score }}"
+      label="诚信分"
+      placeholder="请输入诚信分"
+      input-align="center"
+      size="large"
+    />
+    <van-field
+    bind:input="updateAmount"
+    value="{{ res_amount }}"
+    label="馨币总值"
+    placeholder="请输入馨币总值"
+    input-align="center"
+    size="large"
+    />
+    <van-field
+    bind:input="updatePrimary"
+    value="{{ res_primary_card }}"
+    label="初级互助卡"
+    placeholder="请输入数量"
+    border="{{ false }}"
+    input-align="center"
+    size="large"
+    />
+    <van-field
+    bind:input="updateMiddle"
+    value="{{ res_middle_card }}"
+    label="中级互助卡"
+    placeholder="请输入数量"
+    border="{{ false }}"
+    input-align="center"
+    size="large"
+    />
+    <van-field
+    bind:input="updateAdvanced"
+    value="{{ res_advanced_card }}"
+    label="高级互助卡"
+    placeholder="请输入数量"
+    border="{{ false }}"
+    input-align="center"
+    size="large"
+    />
+
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">删除</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">修改</van-button>
+  </view>
+
+</view>

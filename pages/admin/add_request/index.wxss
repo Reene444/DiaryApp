@@ -1,0 +1,74 @@
+Page{
+  width: 100%;
+  height: 100%;
+}
+
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top{
+  background-color: snow;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon{
+  margin-left: 40rpx;
+  margin-right: 10rpx;
+  float: left;
+  color: #ffa600;
+}
+
+.notice{
+  height: 90rpx;
+  width: 90%;
+  line-height: 90rpx;
+  padding-left: 10rpx;
+}
+
+.item{
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ffa600;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+  background-size:cover;
+  position: fixed;
+}
+
+.list{
+  margin-top: 40rpx;
+  width: 700rpx;
+}
+
+.tx-size{
+  font-size: 10rpx;
+}
+
+.bt1{
+  flex:1;
+}
+
+.bt2{
+  /* margin-top: 40rpx; */
+  flex:1;
+}
+
+.bt_gp{
+  width: 400rpx;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}

@@ -1,0 +1,5 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{appList}}" wx:key="index">
+  <van-cell title="{{item.content}}" label="{{item.time}}" is-link link-type="navigateTo"
+    url="../appeal_info/index?app_id={{item._id}}"/>
+</block>

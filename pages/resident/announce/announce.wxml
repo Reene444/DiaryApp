@@ -1,0 +1,37 @@
+<!--
+    轮播图
+autoplay:是否自动切换
+circular:是否采用衔接滑动
+indicator-dots:是否显示面板指示点
+interval:设置自动切换时间间隔 
+-->
+
+<swiper
+ autoplay="{{true}}"
+ circular="{{true}}"
+ indicator-dots="{{true}}"
+ interval="2600"
+ class="swiper"
+>
+	<swiper-item>
+		<image mode="widthFix" src="/img/resident/1.jpg" class="image"/>
+	</swiper-item>
+	<swiper-item>
+		<image mode="widthFix" src="/img/resident/2.jpg" class="image"/>
+	</swiper-item>
+</swiper>
+
+<block wx:for="{{annList}}" wx:key="index">
+<view class="post-container" data-index="{{index}}" bindtap="gotoAnn">
+  <view class="post-author-date">
+    <image class="post-author" src="cloud://cloud1-8g9f3ct37376cdc2.636c-cloud1-8g9f3ct37376cdc2-1309443535/Career woman icon 2.png"></image>
+    <text class="post-date">{{item.time}}</text>
+  </view>
+  <view class="title">
+  <text class="post-title">{{item.title}}
+  </text>
+<van-tag wx:if="{{item.magnitude=='重要'}}" color="#FFC65B">重要</van-tag>
+</view>
+  <text class="post-content">{{item.content}}</text>
+</view>
+</block>

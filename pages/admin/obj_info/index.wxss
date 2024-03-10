@@ -1,0 +1,156 @@
+Page{
+  width: 100%;
+  height: 100%;
+}
+
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+  background-size:cover;
+  position: fixed;
+}
+
+.list{
+  margin-top: 100rpx;
+  width: 700rpx;
+  margin-bottom: 20rpx;
+}
+
+.tx-size{
+  font-size: 10rpx;
+}
+
+.pic{
+  margin-left: 200rpx;
+  margin-top: -64rpx;
+}
+
+.bt1{
+  margin-left: 60rpx;
+  flex:1;
+}
+
+.bt2{
+  /* margin-top: 40rpx; */
+  flex:1;
+}
+
+.bt_gp{
+  margin-top: 70rpx;
+  margin-bottom: 60rpx;
+  margin-left: 80rpx;
+  margin-right: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.type{
+  color: rgb(56, 56, 56);
+    min-height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  border-width: 90%;
+  display: flex;
+  font-size: 28rpx;
+}
+
+.type label {
+  min-width: 120rpx;
+  margin-left: 33rpx;
+}
+
+  /* 下拉框 */
+  /* fenlei */
+.fenlei{
+    margin: 0 25rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+  .fenlei text{
+    font-size: 28rpx;
+    color: #000000;
+    margin-left: 5rpx;
+  }
+
+  /* 下拉框 */
+  .select_box {
+    background: #fff;
+    width: 500rpx;
+    /* margin: 0 auto; */
+    height: 92rpx;
+    line-height: 92rpx;
+    text-align: left;
+    position: relative;
+  }
+  
+  .select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 86rpx;
+    /* border: 1px solid #efefef; */
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+  }
+  
+  .select_text {
+    font-size: 14rpx;
+    flex: 1;
+    color: rgb(102, 102, 102);
+    line-height: 86rpx;
+    height: 86rpx;
+  }
+  
+  .select_icon {
+    font-size: 28rpx;
+    float: right;
+    color: rgb(102, 102, 102);
+    line-height: 86rpx;
+    height: 86rpx;
+  }
+  
+  .select_img_rotate {
+    transform: rotate(180deg);
+  }
+  
+  .option_box {
+    position: absolute;
+    top: 86rpx;
+    width: 100%;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+  }
+  
+  .option {
+
+    display: block;
+    line-height: 40rpx;
+    font-size: 14rpx;
+    padding: 15rpx 0rpx 15rpx 30rpx;
+    border-bottom: 1px solid #f5f5f5;
+    border-width: 90%;
+  }

@@ -1,0 +1,28 @@
+<!--pages/admin/login/index.wxml-->
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="title">管 理 员 登 录</view>
+  <view class="field">
+  <van-cell-group inset>
+    <van-field
+      value="{{value}}"
+      style="height: 30px;"
+      placeholder="请输入手机号"
+      border="{{ false }}"
+      label="手机号"
+      bind:change="getPhone"
+    />
+    <van-field password
+      value="{{value}}"
+      placeholder="请输入密码"
+      border="{{ false }}"
+      label="密码"
+      bind:change="getPassword"
+    />
+  </van-cell-group>
+  </view>
+  <view class="bt_login">
+  <van-button bindtap="onclick" color="#63C6FF" block>登录</van-button>
+  </view>
+  <van-toast id="van-toast"/>
+</view>

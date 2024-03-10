@@ -1,0 +1,85 @@
+<view class="father">
+  <image class="bg" src="../../../img/resident/bg_login.png"></image>
+  
+  <text style="margin-top:60rpx;font-size: 36rpx;">帮助信息</text>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      value="{{ start_time }}"
+      label="开始时间"
+      input-align="center"
+      size="large"
+      readonly
+    />
+    <van-field
+      value="{{ end_time }}"
+      label="结束时间"
+      input-align="center"
+      size="large"
+      readonly
+    />
+    <van-field
+      value="{{ amount_sum }}"
+      label="馨币总值"
+      size="large"
+      input-align="center"
+      readonly
+    />
+    <van-cell size="large" title-width="6em" title="证明图片">
+      <van-uploader file-list="{{ fileList }}" 
+      max-count="1" deletable="{{false}}"/>
+    </van-cell>
+  </van-cell-group>
+
+  <view style="margin-bottom: 40rpx;margin-top:60rpx;font-size: 36rpx;">过程记录</view>
+  <van-cell-group inset>
+    <block wx:for="{{recordList}}" wx:key="index">
+      <van-cell title="{{item}}"/>
+    </block>
+  </van-cell-group>
+
+<view wx:if="{{isOfficial==false}}">
+<view style="margin-bottom: 40rpx;margin-top:60rpx;font-size: 36rpx;">帮助反馈</view>
+<view style="margin-bottom: 100rpx;">
+  <van-cell-group inset>
+    <van-cell
+    title-width="4em"
+    title="满意度"
+    size="large">
+    <view style="margin-right: 40rpx;">
+      <van-rate
+      size="{{ 24 }}"
+      color="#ffd21e"
+      icon="like"
+      void-icon="like-o"
+      color="#FFC65B"
+      value="{{score}}"
+      /></view>
+    </van-cell>
+    <van-field
+      title-width="5em"
+      value="{{ award }}"
+      label="奖励馨币"
+      input-align="center"
+      size="large"
+    />
+    <van-field
+      title-width="5em"
+      value="{{ sum }}"
+      label="总馨币"
+      input-align="center"
+      size="large"
+    />
+    <view style="word-break: break-all;">
+    <van-field
+    input-align="center"
+      title-width="5em"
+      value="{{evaluation}}"
+      label="评价"
+      size="large"
+    /></view>
+  </van-cell-group>
+  </view>
+</view>
+</view>
+</view>

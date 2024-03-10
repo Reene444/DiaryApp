@@ -1,0 +1,12 @@
+<van-sticky>
+  <view class="top">
+<van-dropdown-menu active-color="#FFB52A">
+  <van-dropdown-item bind:change="onSwitch1Change" value="{{ value1 }}" options="{{ option1 }}" >
+  </van-dropdown-item>
+</van-dropdown-menu>
+</view>
+</van-sticky>
+
+<block wx:for="{{tranList}}" wx:key="index">
+  <van-cell title="{{item.time}}" label="金额：{{item.amount}} 事务：{{item.affair}}" />
+</block>

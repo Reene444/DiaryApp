@@ -1,0 +1,5 @@
+page{
+  /*定义主题颜色*/
+  --themeColor_yellow: #FFC65B;
+  --themeColor_blue: #63C6FF;
+}

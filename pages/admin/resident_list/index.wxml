@@ -1,0 +1,4 @@
+<block wx:for="{{resList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.phone}}" is-link link-type="navigateTo"
+    url="../resident_info/index?res_id={{item._id}}"/>
+</block>

@@ -1,0 +1,72 @@
+<!--pages/resident/publication/publication.wxml-->
+<view class="father">
+
+  <view class="list">
+  <van-cell-group>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateName"
+      type="textarea"
+      value="{{ title }}"
+      label="Title"
+      placeholder="please enter the activity title"
+      maxlength="30"
+      title-width="6em"
+      show-word-limit
+      autosize
+    /></view>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateDescription"
+      type="textarea"
+      show-word-limit
+      maxlength="600"
+      title-width="6em"
+      autosize
+      value="{{ description }}"
+      label="Description"
+      placeholder="please enter the description"
+    /></view>
+    <van-cell title="Start time" title-width="5em">
+    <picker mode="date" value="{{start_date}}" start="{{lim_st_d}}" bindchange="updateDate">
+      <view style="text-align: center;margin-bottom: 20rpx;">
+        {{ start_date }}
+      </view>
+    </picker>
+    <picker mode="time" value="{{start_time}}" bindchange="updateTime">
+      <view style="text-align: center;">
+        {{ start_time }}
+      </view>
+    </picker>
+    </van-cell>
+    <van-cell title="Level" title-width="5.3em">
+    <van-radio-group
+     bind:change="updateLevel"
+      name="活动规模"
+      value="{{level}}"
+      direction="horizontal"
+      title-width="5em"
+    >
+    <van-radio name="小型">normal</van-radio>
+    <van-radio name="大型">important</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field
+      bind:input="updateLocation"
+      type="textarea"
+      value="{{ location }}"
+      label="location"
+      placeholder="please enter the location"
+      title-width="6em"
+      autosize
+    />
+
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt1">
+    <van-button block color="#FFC65B" size="large" bindtap="addData">
+        提交审核
+    </van-button>
+</view>

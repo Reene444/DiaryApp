@@ -1,0 +1,46 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+
+  <text style="margin-top:60rpx;font-size: 36rpx;">帮助信息</text>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+    value="{{ title }}"
+    label="请求标题"
+    input-align="center"
+    size="large"
+    readonly
+    />
+    <van-field
+      value="{{ start_time }}"
+      label="开始时间"
+      input-align="center"
+      size="large"
+      readonly
+    />
+  </van-cell-group>
+
+<view style="margin-bottom: 40rpx;margin-top:60rpx;font-size: 36rpx;">记录</view>
+  <van-cell-group inset>
+  <block wx:for="{{recordList}}" wx:key="index">
+    <van-cell title="{{item}}"/>
+  </block>
+  </van-cell-group>
+</view>
+
+<view style="width: 600rpx;display: flex;flex-direction: row;margin-top: 80rpx;">
+<view style="flex:5;margin-left: 30rpx;">
+  <view style="word-break: break-all;">
+<van-field
+  type="textarea"
+  autosize
+  value="{{this_record}}"
+  bind:input="updateRecord"
+  placeholder="请输入新记录内容"
+/></view>
+</view>
+<view style="flex:2;margin-left: 30rpx;">
+<van-button bindtap="addRecord" color="#FFC65B">添加</van-button>
+</view>
+</view>
+</view>

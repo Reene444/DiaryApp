@@ -1,0 +1,18 @@
+<van-search value="{{ value }}" class="search" placeholder="请输入搜索关键词"/>
+
+  <view class="top">
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#FFC65B">
+  <van-tab title="我发布的">
+    <block wx:for="{{actList}}" wx:key="index">
+      <van-cell title="{{item.name}}" label="{{item.description}}" 
+      data-index="{{index}}" bindtap="gotoAct"/>
+    </block>
+  </van-tab>
+  <van-tab title="我参与的">
+<block wx:for="{{actList}}" wx:key="index">
+  <van-cell title="{{item.act[0].name}}" label="{{item.act[0].description}}"
+   data-index="{{index}}" bindtap="gotoAct"/>
+</block>
+  </van-tab>
+</van-tabs>
+</view>

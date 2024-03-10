@@ -1,0 +1,49 @@
+Page{
+  width: 100%;
+  height: 100%;
+}
+
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+  background-size:cover;
+  position: fixed;
+}
+
+.tx{
+  margin-top: 70rpx;
+}
+
+.list{
+  margin-top: 40rpx;
+  width: 700rpx;
+}
+
+.bt_gp{
+  display: flex;
+  flex-direction: row;
+  margin-top: 60rpx;
+  margin-left: 80rpx;
+  margin-right: 80rpx;
+  margin-bottom: 60rpx;
+}
+
+.bt1{
+  width: 360rpx;
+  margin-left: 30rpx;
+}
+
+.bt2{
+  width: 360rpx;
+}

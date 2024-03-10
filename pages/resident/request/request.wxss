@@ -1,0 +1,213 @@
+/* .search_input {
+    height: 90rpx;
+    background-color: #FFC65B;
+    padding: 10rpx;
+  } 
+  .search_input .navigator{
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15rpx;
+    color: #999;
+    font-size: 32rpx;
+  } */
+
+/* 搜索框样式
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:95%; 
+    padding: 15rpx;
+    height: 60rpx;
+    background-color: whitesmoke;
+    margin-top: 5%;
+    border: 1rpx solid #FFC65B;
+    border-radius: 15rpx;
+
+}
+
+.search input {
+    font-size: 27rpx;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 30rpx;
+}
+.search van-icon {
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 20rpx;
+}
+
+
+.view-search {
+    display: flex;
+    flex-direction: row;
+    height: 70rpx;
+    margin: 20rpx;
+    padding: 5rpx;
+    border: 1px #e4e2e2 solid;
+    border-width: thin;
+    align-items: center;
+} */
+
+.search1{
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.input {
+    flex: 1;
+    height: 60rpx;
+}
+
+.input-placeholder {
+    color: #999;
+}
+
+.button {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.details {
+    margin-left: 10rpx;
+    font-size: 30rpx;
+    color: #fca400;
+}
+
+.pubTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pubTitle .title {
+    font-size: 30rpx;
+    position: relative;
+    padding-left: 20rpx;
+}
+
+.pubTitle .title::before {
+    display: block;
+    width: 14rpx;
+    height: 36rpx;
+    background: #FFC65B;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -20rpx;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30rpx;
+  }
+
+  .post-block{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .post-pic{
+    margin-left: 10rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    height: 170rpx ;
+    width: 220rpx;
+  }
+
+  .post-author-date{
+    flex-direction: row;
+    margin: 10rpx 0 20rpx 10rpx;
+    align-items: center;
+  }
+  .post-author{
+    height: 60rpx ;
+    width: 60rpx;
+  }
+  .post-date{
+    margin-left: 20rpx;
+    font-size: 26rpx;
+  }
+  .post-title{
+    font-size: 34rpx;
+    font-weight: 600;
+    margin-top: 250rpx;
+    margin-left: 10rpx;
+    margin-bottom: 14rpx;
+    color:#333;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .post-content{
+    font-size: 28rpx;
+    color:#666;
+    letter-spacing: 2rpx;
+    margin-left: 10rpx;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .post-state{
+    font-size: 20rpx;
+    color:#c2c2c2;
+    margin-left: 10rpx;
+    letter-spacing: 1rpx;
+    font-weight: 600;
+  }
+  .post-like{
+    display: flex;
+    flex-direction: row;
+    font-size: 26rpx;
+    margin-left: 20rpx;
+    align-items: center;
+  }
+  .post-like-image{
+    height: 32rpx;
+    width: 32rpx;
+    margin-right: 16rpx;
+  }
+  .post-like-font{
+    margin-right: 40rpx;
+  }
+  
+  .bg{
+    position: absolute;
+    margin-left: 10rpx;
+    margin-top: -120rpx;
+    width: 720rpx;
+    height: 260rpx;
+    z-index: -1;
+  }
+
+  .emg_container{
+    margin-top: 10rpx;
+    margin-left: 70rpx;
+    margin-bottom: -20rpx;
+  }
+
+  .req{
+    margin-top: 100rpx;
+  }
+
+  /* 悬浮按钮 */
+
+.add_icon {
+    position: fixed;
+    width: 100px;
+    height: 42px;
+    bottom: 30px;
+    right: 20px;
+}

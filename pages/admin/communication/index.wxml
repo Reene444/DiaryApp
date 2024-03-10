@@ -1,0 +1,17 @@
+<van-sticky>
+  <view class="top">
+<van-dropdown-menu active-color="#FFB52A">
+  <van-dropdown-item bind:change="onSwitch1Change" value="{{ value1 }}" options="{{ option1 }}" >
+  </van-dropdown-item>
+</van-dropdown-menu>
+</view>
+</van-sticky>
+
+<block wx:for="{{comList}}" wx:key="index">
+  <van-cell title="{{item.resident}}" label="{{item.content}}" is-link link-type="navigateTo"
+    url="../com_info/index?com_id={{item._id}}">
+    <view wx:if="{{item.ischecked==false}}">
+    <van-tag type="warning">{{"!"}}</van-tag>
+    </view>
+    </van-cell>
+</block>

@@ -1,0 +1,5 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{actList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.description}}" is-link link-type="navigateTo"
+    url="../approval_info/index?act_id={{item._id}}"/>
+</block>

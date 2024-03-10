@@ -1,0 +1,22 @@
+<van-search value="{{ value }}" class="search" placeholder="请输入搜索关键词"/>
+
+  <view class="top">
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#FFC65B">
+  <van-tab title="我买入的">
+    <block wx:for="{{objList}}" wx:key="index">
+      <van-cell title="{{item.obj[0].name}}" label="{{item.obj[0].description}}" 
+      data-index="{{index}}" bindtap="gotoObj">{{item.state}}
+      <van-tag color="#FFC65B" wx:if="{{item.state=='收货中'}}">等待收货</van-tag>
+      </van-cell>
+    </block>
+  </van-tab>
+  <van-tab title="我卖出的">
+<block wx:for="{{objList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.description}}"
+   data-index="{{index}}" bindtap="gotoObj">{{item.state}}
+   <van-tag color="#FFC65B" wx:if="{{item.state=='发货中'}}">等待发货</van-tag>
+   </van-cell>
+</block>
+  </van-tab>
+</van-tabs>
+</view>

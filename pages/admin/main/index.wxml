@@ -1,0 +1,15 @@
+<view class="list">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <van-cell-group inset>
+    <van-cell title="紧急请求" size="large" color="red" is-link link-type="navigateTo"
+    url="../urgency/index"><van-tag type="warning">{{num_urg}}</van-tag></van-cell>
+    <van-cell title="互助申诉" size="large" is-link link-type="navigateTo"
+    url="../appeal/index"><van-tag type="warning">{{num_app}}</van-tag></van-cell>
+    <van-cell title="活动审批" size="large" is-link link-type="navigateTo"
+    url="../act_approval/index"><van-tag type="warning">{{num_apr}}</van-tag></van-cell>
+    <van-cell title="活动签到" size="large" is-link link-type="navigateTo"
+    url="../act_checkin/index"><van-tag type="warning">{{num_che}}</van-tag></van-cell>
+    <van-cell title="交流与建议" size="large" is-link link-type="navigateTo"
+    url="../communication/index"><van-tag type="warning">{{num_com}}</van-tag></van-cell>
+  </van-cell-group>
+</view>

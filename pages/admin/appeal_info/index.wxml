@@ -1,0 +1,133 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+
+  <text style="margin-top:60rpx;font-size: 36rpx;">申诉信息</text>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      value="{{ res_phone }}"
+      label="申诉人手机号"
+      input-align="center"
+      title-width="7em"
+      readonly
+    />
+    <van-field
+      value="{{ helper_phone }}"
+      label="申诉对象手机号"
+      input-align="center"
+      title-width="7em"
+      readonly
+    />
+    <view style="word-break: break-all;">
+    <van-field
+    type="textarea"
+    autosize
+      value="{{ appeal_content }}"
+      label="申诉内容"
+      input-align="center"
+      title-width="7em"
+      readonly
+    /></view>
+  </van-cell-group>
+
+  <view style="margin-bottom: 40rpx;margin-top:60rpx;font-size: 36rpx;">请求信息</view>
+  <van-cell-group inset>
+    <van-field
+      value="{{ title }}"
+      label="请求标题"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ content }}"
+      label="请求内容"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ level }}"
+      label="等级"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+    wx:if="{{isUrgent==true}}"
+      value="紧急"
+      label="紧急程度"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ type }}"
+      label="类型"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ time_limit }}"
+      label="时间限制"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ demand }}"
+      label="具体要求"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ settle_way }}"
+      label="结算方式"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+    <van-field
+      value="{{ amount }}"
+      label="金额"
+      input-align="center"
+      title-width="4em"
+      readonly
+    />
+  </van-cell-group>
+
+  <view style="margin-bottom: 40rpx;margin-top:60rpx;font-size: 36rpx;">帮助信息</view>
+  <van-cell-group inset>
+    <van-field
+      value="{{ start_time }}"
+      label="开始时间"
+      input-align="center"
+      readonly
+    />
+    <van-field
+      value="{{ end_time }}"
+      label="结束时间"
+      input-align="center"
+      readonly
+    />
+    <van-cell title-width="6em" title="证明图片">
+      <van-uploader file-list="{{ fileList }}" 
+      max-count="1" deletable="{{false}}"/>
+    </van-cell>
+  </van-cell-group>
+
+    <view wx:if="{{recordList.length!=0}}" style="margin-bottom: 60rpx;margin-top:60rpx;font-size: 36rpx;">过程记录</view>
+  <van-cell-group inset>
+    <block wx:for="{{recordList}}" wx:key="index">
+      <van-cell title="{{item}}"/>
+    </block>
+  </van-cell-group>
+  </view>
+
+  <view class="bt">
+  <van-button bindtap="finish" color="#FFC65B" size="large">申诉处理完成</van-button>
+</view>
+</view>
+

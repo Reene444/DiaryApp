@@ -1,0 +1,14 @@
+<view class="title">
+{{ann_title}}
+<van-tag wx:if="{{ann_magnitude=='不重要'}}" color="#63C6FF">普通</van-tag>
+<van-tag wx:if="{{ann_magnitude=='重要'}}" color="#FFC65B">重要</van-tag>
+</view>
+<view class="time">
+{{ann_time}}
+</view>
+
+<van-divider />
+
+<view class="content">
+{{ann_content}}
+</view>

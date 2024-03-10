@@ -1,0 +1,86 @@
+<view class="top">
+  <text class="tx">姓名：{{adm_name}}\n手机号：{{adm_phone}}\n</text>
+  <view class="bt">
+    <van-button bindtap="info_mod" plain color="#FFC65B" icon="edit"><text style="font-weight: 500;">管理</text></van-button>
+  </view>
+</view>
+<van-divider />
+
+<van-cell class="{{showView?'row0_show':'row0_hide'}}">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">管理员信息</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="admin_list" icon="manager-o" color="#63C6FF">管理员列表</van-button>
+  <van-button bindtap="add_admin" icon="add-o" color="#63C6FF" style="margin-left: 20rpx;">新增管理员</van-button>
+  </view>
+</van-cell>
+
+<van-cell class="{{showView?'row0_show':'row0_hide'}}">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">资金管理</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="account_book" icon="bill-o" color="#63C6FF">账本</van-button>
+  <van-button bindtap="add_account" icon="balance-pay" color="#63C6FF" style="margin-left: 20rpx;">资金入账</van-button>
+  </view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">居民管理</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="resident_list" icon="user-o" color="#63C6FF">居民列表</van-button>
+  <van-button bindtap="add_res" icon="add-o" color="#63C6FF" style="margin-left: 20rpx;">添加居民</van-button>
+  </view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">交易体系管理</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="trading_record" icon="pending-payment" color="#63C6FF">交易记录</van-button>
+  <van-button bindtap="shop" icon="shop-o" color="#63C6FF" style="margin-left: 20rpx;">时馨商店</van-button>
+</view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">社区公告</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="annou_list" icon="bullhorn-o" color="#63C6FF">公告列表</van-button>
+  <van-button bindtap="add_annou" icon="add-o" color="#63C6FF" style="margin-left: 20rpx;">发布公告</van-button>
+  </view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">互助体系管理</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="request_list" icon="todo-list-o" color="#63C6FF">请求列表</van-button>
+  <!-- <van-button bindtap="add_request" icon="add-o" color="#63C6FF" style="margin-left: 20rpx;">发布请求</van-button> -->
+  </view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">社区活动</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="act_list" icon="flag-o" color="#63C6FF">活动列表</van-button>
+  <!-- <van-button bindtap="add_act" icon="add-o" color="#63C6FF" style="margin-left: 20rpx;">发布活动</van-button> -->
+  </view>
+</van-cell>
+
+<van-cell class="row1">
+  <view name="title">
+    <view style="font-size: 40rpx;color: darkslategray;position:absolute;margin-left:20rpx;">流动集市</view>
+  </view>
+  <view class="row0-bt">
+  <van-button bindtap="object_list" icon="send-gift-o" color="#63C6FF">物品列表</van-button>
+  </view>
+</van-cell>

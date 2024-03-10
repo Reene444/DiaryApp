@@ -1,0 +1,36 @@
+<view class="father">
+
+  <view class="list">
+<van-cell-group>
+  <van-field
+    placeholder="please enter the title"
+    label="Title"
+    bind:change="objNameInput"
+    maxlength="20"
+    title-width="5em"
+    show-word-limit
+    type="textarea"
+    autosize
+  />
+  <view style="word-break: break-all;">
+  <van-field
+    placeholder="please enter the content"
+    type="textarea"
+    label="Content"
+    bind:change="objDesInput"
+    show-word-limit
+    maxlength="700"
+    title-width="5em"
+    autosize
+  /></view>
+  
+
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt1">
+    <van-button block color="#FFC65B" size="large" bindtap="objAdd">
+        post
+    </van-button>
+</view>

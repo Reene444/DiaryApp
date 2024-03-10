@@ -1,0 +1,94 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+  <van-field
+    placeholder="请填写商品名"
+    label="物品名"
+    bind:change="objNameInput"
+    value="{{obj.name}}"
+    title-width="5em"
+    show-word-limit
+    maxlength="20"
+    type="textarea"
+    autosize
+  />
+  <view style="word-break: break-all;">
+  <van-field
+    placeholder="请填写商品描述"
+    type="textarea"
+    label="物品描述"
+    value="{{obj.description}}"
+    bind:change="objDesInput"
+    show-word-limit
+    maxlength="700"
+    title-width="5em"
+    autosize
+  /></view>
+  <view style="background:white">
+    <van-field
+    placeholder="请填写取货时间"
+    label="取货时间"
+    value="{{obj.time}}"
+    bind:change="objTimeInput"
+    title-width="5em"
+  />
+  <van-field
+    placeholder="请填写取货地点"
+    label="取货地点"
+    value="{{obj.location}}"
+    bind:change="objLocInput"
+    title-width="5em"
+  />
+  <view class="type">
+      <label>类型</label>
+      <view class='fenlei'>
+          <view class="select_box">
+              <view class='select' catchtap='selectTaps'>
+                  <text class='select_text'>{{selectDatas[indexs]}}</text>
+                  <van-icon class="select_icon" name="arrow-down" />
+              </view>
+              <view class='option_box' wx:if="{{shows}}" style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+                  <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>
+  <van-cell title="交易方式" title-width="6em">
+  <van-radio-group
+  value="{{ obj.trading }}"
+  bind:change="objMethodInput"
+  direction="horizontal"
+  >
+  <van-radio name="馨币">馨币</van-radio>
+  <van-radio name="现金">现金</van-radio>
+</van-radio-group>
+</van-cell>
+  <van-field
+    placeholder="请填写价格"
+    label="价格"
+    value="{{obj.amount}}"
+    title-width="5em"
+    bind:change="objPriceInput"
+  />
+  <view style="background: white;">
+  <van-cell title="物品图片" border="{{false}}"/>
+  <view class="pic">
+  <van-uploader file-list="{{ fileList }}" bind:after-read="objPic" deletable="{{false}}" max-count="{{2}}" />
+  </view>
+  </view>
+  </van-cell-group>
+
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">删除</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">修改</van-button>
+  </view>
+
+</view>

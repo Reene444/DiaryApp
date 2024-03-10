@@ -1,0 +1,30 @@
+<view class="father">
+<image class="bg" src="../../../img/admin/bg_login.png"></image>
+<image class="ig" src="../../../img/admin/add_account.png"></image>
+  <view class="list">
+    <van-cell-group inset>
+  <view style="word-break: break-all;">
+    <van-field
+      type="textarea"
+      title-width="5em"
+      autosize
+      label="事件"
+      value="{{account_event}}"
+      readonly
+    /></view>
+    <van-field
+      label="金额"
+      title-width="5em"
+      value="{{account_amount}}"
+      readonly
+    />
+    <van-field
+      label="时间"
+      title-width="5em"
+      readonly
+      value="{{account_time}}"
+    />
+  </van-cell-group>
+</view>
+</view>
+

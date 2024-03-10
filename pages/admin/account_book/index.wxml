@@ -1,0 +1,4 @@
+<block wx:for="{{accountList}}" wx:key="index">
+  <van-cell title="{{item.event}}" label="{{item.amount}}" is-link link-type="navigateTo"
+    url="../account_info/index?account_id={{item._id}}"/>
+</block>

@@ -1,0 +1,130 @@
+<view class="top">
+<van-icon name="volume-o" class="icon"/>
+  <swiper vertical="{{true}}" class="notice" autoplay="{{true}}">
+    <swiper-item class="item">标题：简要概述您的请求，尽量突出重点</swiper-item>
+    <swiper-item class="item">内容：详细表述您的请求内容、执行步骤等</swiper-item>
+    <swiper-item class="item">时间限制：填入您期望的执行时间与时长</swiper-item>
+    <swiper-item class="item">具体要求：描述您的要求，以及对帮助人的期望</swiper-item>
+    <swiper-item class="item">等级：提交后，您将被扣除相应等级的请求卡</swiper-item>
+    <swiper-item class="item">紧急程度：只有高级请求可以设置为紧急</swiper-item>
+    <swiper-item class="item">必要情况时可设置紧急，会被管理员和更多的居民看到</swiper-item>
+    <swiper-item class="item">类型：选择您提交请求的具体分类</swiper-item>
+    <swiper-item class="item">结算方式：分为时长计费与单次计费两种</swiper-item>
+    <swiper-item class="item">单次计费：基础馨币总值 = 您填写的基础馨币</swiper-item>
+    <swiper-item class="item">时长计费：基础馨币总值 = 帮助时长 * 基础馨币</swiper-item>
+  </swiper>
+</view>
+
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateTitle"
+      value="{{ title }}"
+      label="请求标题"
+      placeholder="请输入标题"
+      maxlength="20"
+      title-width="5em"
+      show-word-limit
+      autosize
+    />
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateContent"
+      type="textarea"
+      show-word-limit
+      maxlength="500"
+      title-width="5em"
+      autosize
+      value="{{ content }}"
+      label="请求内容"
+      placeholder="请输入内容"
+    /></view>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateTimeLimit"
+      type="textarea"
+      show-word-limit
+      maxlength="50"
+      title-width="5em"
+      autosize
+      value="{{ time_limit }}"
+      label="时间限制"
+      placeholder="请输入时间限制"
+    /></view>
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateDemand"
+      type="textarea"
+      show-word-limit
+      maxlength="200"
+      title-width="5em"
+      autosize
+      value="{{ demand }}"
+      label="具体要求"
+      placeholder="请输入具体要求"
+    /></view>
+    <van-cell title="等级" title-width="5em">
+      <van-radio-group
+     bind:change="updateLevel"
+      name="等级"
+      value="{{level}}"
+      direction="horizontal"
+    >
+    <van-radio name="初级" style="margin-bottom: 16rpx;">初级请求</van-radio>
+    <van-radio name="中级" style="margin-bottom: 16rpx;">中级请求</van-radio>
+    <van-radio name="高级" style="margin-bottom: 16rpx;">高级请求</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-cell title="紧急程度" title-width="5em">
+      <van-radio-group
+     bind:change="updateisUrgent"
+      name="紧急程度"
+      value="{{isUrgent}}"
+      direction="horizontal"
+    >
+    <van-radio name="{{true}}" style="margin-bottom: 16rpx;">紧急</van-radio>
+    <van-radio name="{{false}}" style="margin-bottom: 16rpx;">不紧急</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-cell title="类型" title-width="5em">
+      <van-radio-group
+     bind:change="updateType"
+      name="类型"
+      value="{{type}}"
+      direction="horizontal"
+      >
+    <van-radio name="家政服务" style="margin-bottom: 16rpx;">家政服务</van-radio>
+    <van-radio name="教学活动" style="margin-bottom: 16rpx;">教学活动</van-radio>
+    <van-radio name="协助管理" style="margin-bottom: 16rpx;">协助管理</van-radio>
+    <van-radio name="装配维修" style="margin-bottom: 16rpx;">装配维修</van-radio>
+    <van-radio name="物件取送" style="margin-bottom: 16rpx;">物件取送</van-radio>
+    <van-radio name="信息宣传" style="margin-bottom: 16rpx;">信息宣传</van-radio>
+    <van-radio name="其他">其他</van-radio>
+      </van-radio-group>
+    </van-cell>
+    <van-cell title="结算方式" title-width="5em">
+    <van-radio-group
+     bind:change="updateSettle"
+      name="结算方式"
+      value="{{settle_way}}"
+      direction="horizontal"
+    >
+    <van-radio name="时长" style="margin-bottom: 16rpx;">时长计费</van-radio>
+    <van-radio name="单次">单次计费</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field
+      bind:input="updateAmount"
+      label="基础馨币"
+      placeholder="请输入基础馨币"
+      title-width="5em"
+    />
+  </van-cell-group>
+</view>
+<view class="bt_gp">
+  <van-button bindtap="addData" color="#FFC65B" size="large">确认发布</van-button>
+</view>
+</view>
+

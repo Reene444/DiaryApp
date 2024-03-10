@@ -1,0 +1,44 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateTitle"
+      value="{{ ann_title }}"
+      label="标题"
+      placeholder="请输入标题"
+      maxlength="30"
+      title-width="3em"
+      show-word-limit
+      autosize
+    />
+    <view style="word-break: break-all">
+    <van-field
+      bind:input="updateContent"
+      type="textarea"
+      show-word-limit
+      maxlength="1000"
+      title-width="3em"
+      autosize
+      value="{{ ann_content }}"
+      label="内容"
+      placeholder="请输入内容"
+    /></view>
+    <van-cell title="重要程度">
+    <van-radio-group
+     bind:change="updateMagnitude"
+      name="重要程度"
+      value="{{ann_magnitude}}"
+      direction="horizontal"
+    >
+    <van-radio name="重要" style="margin-bottom: 16rpx;">重要</van-radio>
+    <van-radio name="不重要">不重要</van-radio>
+    </van-radio-group>
+    </van-cell>
+  </van-cell-group>
+</view>
+<view class="bt1">
+  <van-button bindtap="addData" color="#FFC65B" size="large">确认发布</van-button>
+</view>
+</view>
+

@@ -1,0 +1,5 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{urgList}}" wx:key="index">
+  <van-cell title="{{item.title}}" label="{{item.time}}" is-link link-type="navigateTo"
+    url="../urgency_info/index?req_id={{item._id}}"/>
+</block>

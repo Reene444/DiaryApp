@@ -1,0 +1,236 @@
+
+.row-center{
+    display:flex; 
+    flex-direction:row;
+    align-items: center;
+  }
+  
+  .center-both{
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-container{
+      position: absolute;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: scroll;
+    
+  }
+  
+  .tab-container{
+      height: 104rpx;
+      width: 100%;
+      position: fixed;
+      bottom: 0rpx;
+      border-top: 2rpx solid #E5E5E5FF;
+  
+      box-sizing: border-box;
+      background: #FFFFFFFF;
+      overflow: hidden;
+  }
+  
+  .active{
+      color: #0B7BFBFF;
+  }
+  
+  .unactive{
+      color: #616161FF;
+  }
+  
+  .icon{
+      font-size: 40rpx;
+  }
+  
+  .text{
+      font-size: 40rpx;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      line-height: 32rpx;
+        
+  }
+  .container{
+    background: #f4f4f4;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.profile-info{
+    width: 100%;
+    height: 280rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fde8c1;
+}
+
+.profile-info .avatar{
+    height: 148rpx;
+    width: 148rpx;
+    border-radius: 50%;
+}
+
+.info{
+    margin-top: 30rpx;
+    height: 85rpx;
+    flex-direction: column;
+    color: #7f7f7f;
+    font-size: 30rpx;
+    margin-left: 60rpx;
+}
+.name{
+    margin-top: -40rpx;
+    display: flex;
+    margin-bottom: 10rpx;
+}
+
+
+.phone{
+    display: block;
+    margin-bottom: 20rpx;
+}
+
+.amount{
+    display: block;
+    line-height: 30rpx;
+}
+
+.user-menu{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+}
+
+.user-menu .item{
+    float: left;
+    width: 33%;
+    height: 187.5rpx;
+    border-right: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.user-menu .item .a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-menu .item.no-border {
+    border-right: 0;
+}
+
+.user-menu .item.item-bottom {
+    border-bottom: none;
+}
+
+.user-menu .icon{
+    margin: 0 auto;
+    display: block;
+    height: 52.803rpx;
+    width: 52.803rpx;
+    margin-bottom: 16rpx;
+}
+
+.user-menu .icon.order{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -437.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.coupon{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -62.4997rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.gift{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -187.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.address{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 0 no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.security{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -500rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.kefu{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -312.5rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.help{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -250rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+.user-menu .icon.feedback{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-sdf6a55ee56-f2c2b9c2f0.png) 0 -125rpx no-repeat;
+    background-size: 52.803rpx;
+}
+
+
+.user-menu .txt{
+    display: block;
+    height: 24rpx;
+    width: 100%;
+    font-size: 24rpx;
+    color:#333;
+    margin-top: 10rpx;
+}
+
+.van-icon {
+    color: #333;
+}
+
+.logout{
+    margin-top: 50rpx;
+    height: 101rpx;
+    width: 100%;
+    line-height: 101rpx;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    font-size: 30rpx;
+}
+.mytop-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+  }
+
+  .mytop-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .mytop-avatar{
+    overflow:hidden;  
+    width: 130rpx;
+    height: 130rpx; 
+    left: 50%;  
+    border-radius: 50%;  
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+    margin-left: 120rpx;
+  }
+  .mytop-username{
+    font-size: 35rpx;
+    font-family: SourceHanSansCN-Medium;
+    color: #000000;
+    margin-top: 10rpx;
+  }

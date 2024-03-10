@@ -1,0 +1,6 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{annList}}" wx:key="index">
+  <van-cell title="【{{item.magnitude}}】{{item.title}}" label="{{item.content}}" is-link link-type="navigateTo"
+    url="../annou_info/index?ann_id={{item._id}}">
+  </van-cell>
+</block>

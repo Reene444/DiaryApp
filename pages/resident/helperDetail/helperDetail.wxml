@@ -1,0 +1,52 @@
+<view class="father">
+  <image class="bg" src="../../../img/resident/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+    value="{{ res_phone }}"
+    label="手机号"
+    input-align="center"
+    size="large"
+    readonly
+    />
+    <van-field
+      value="{{ res_name }}"
+      label="姓名"
+      input-align="center"
+      size="large"
+      readonly
+    />
+    <van-field
+      value="{{ res_gender }}"
+      label="性别"
+      input-align="center"
+      size="large"
+      readonly
+    />
+    <van-field
+      value="{{ res_birthday }}"
+      label="出生日期"
+      input-align="center"
+      size="large"
+      readonly
+    />
+    <van-field
+      value="{{ res_credit_score }}"
+      label="诚信分"
+      input-align="center"
+      size="large"
+      readonly
+    />
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="refuse" size="large">拒绝</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="check" color="#FFC65B" size="large">确认</van-button>
+  </view>
+
+</view>

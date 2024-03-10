@@ -1,0 +1,10 @@
+<view class="father">
+  <image class="bg" src="../../img/login/bg_login.png"></image>
+  <view class="title">Welcome to HackTime</view>
+
+  <image class="logo" src="../../img/login/logo.png"></image>
+  <view class="bt_res">
+  <van-button style="width: 20vw;" color="#FFC65B" bindtap="reslogin" block>Login</van-button>
+  </view>
+
+</view>

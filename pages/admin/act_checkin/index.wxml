@@ -1,0 +1,4 @@
+<block wx:for="{{actList}}" wx:key="index">
+  <van-cell title="{{item.name}}" label="{{item.start_time}}" is-link link-type="navigateTo"
+    url="../checkin_info/index?act_id={{item._id}}"/>
+</block>

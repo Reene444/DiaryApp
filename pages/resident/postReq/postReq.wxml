@@ -1,0 +1,48 @@
+<view class="main">
+<view class="top">
+<van-icon name="volume-o" class="icon"/>
+  <swiper vertical="{{true}}" class="notice" autoplay="{{true}}">
+  
+    <swiper-item class="item">content：one sentence to sum up today</swiper-item>
+ 
+  </swiper>
+</view>
+
+<view class="father">
+
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateTitle"
+      value="{{ title }}"
+      label="Title"
+      placeholder="please"
+      maxlength="20"
+      title-width="5em"
+      show-word-limit
+      autosize
+    />
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateContent"
+      type="textarea"
+      show-word-limit
+      maxlength="500"
+      title-width="5em"
+      autosize
+      value="{{ content }}"
+      label="content"
+      placeholder="please enter one sentence to sum up today"
+    /></view>
+
+  </van-cell-group>
+</view>
+</view>
+</view>
+
+<view class="bt1">
+    <van-button block color="#FFC65B" size="large" bindtap="addData">
+        post
+    </van-button>
+</view>
+

@@ -1,0 +1,175 @@
+<image class="bg" src="../../../img/resident/bg_login.png"></image>
+
+<van-cell-group inset>
+<view class="container">
+    <view class="bg-fff p-lr30">
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">请求标题</label>
+            <label for="" class="ml40 flex1 txt lh15" >{{title}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">请求人</label>
+            <label for="" class="ml40 flex1 txt lh15" >{{petitioner}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">请求内容</label>
+            <label for="" class="ml40 flex1 txt lh15" >{{content}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">等级</label>
+            <label for="" class="ml40 flex1" >{{level}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center" wx:if="{{isUrgent==true}}">
+            <label for="" class="font14">紧急程度</label>
+            <label for="" class="ml40 flex1" ><text>紧急</text></label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">类型</label>
+            <label for="" class="ml40 flex1" >{{type}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">时间限制</label>
+            <label for="" class="ml40 flex1" >{{time_limit}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">具体要求</label>
+            <label for="" class="ml40 flex1" >{{demand}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">结算方式</label>
+            <label for="" class="ml40 flex1" >{{settle_way}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b flex ai-center">
+            <label for="" class="font14">金额</label>
+            <label for="" class="ml40 flex1 txt lh15" >{{amount}}</label>
+        </view>
+
+        <view class="ipt-wrap border-b ai-center">
+            <label class="font14">状态</label>
+            <label for="" class="ml40 flex1">{{state}}</label>
+            <van-steps steps="{{steps}}" active="{{active}}" direction="vertical"/>
+        </view>
+    </view>
+<!-- 
+    <view style="color:#f5f5f5;height: 250rpx;">
+    </view> -->
+</view>
+</van-cell-group>
+
+<!--随着帮助和用户的变化而变化-->
+    <!--等待帮助中-->
+    <van-button block
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==0)&&(identity==1)}}" disabled>
+        等待帮助中
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==0)&&(identity==0||identity==2)}}" bindtap="help">
+        提供帮助
+    </van-button>
+    <!--帮助确认中-->
+    <van-button block color="#FFC65B" 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    size="large" wx:if="{{(active==1)&&(identity==1)}}" bindtap="check_helper">
+        查看帮助人信息
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    size="large" wx:if="{{(active==1)&&(identity==2)}}" bindtap="nothelp">
+        取消帮助
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==1)&&(identity==0)}}" disabled>
+        已有人帮助
+    </van-button>
+    <!--准备中-->
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==2)&&(identity==1)}}" disabled>
+        准备中
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==2)&&(identity==2)}}" bindtap="start">
+        开始帮助
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==2)&&(identity==0)}}" disabled>
+        已有人帮助
+    </van-button>
+    <!--帮助中-->
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==3)&&(identity==1)}}" bindtap="check_process">
+        浏览帮助过程
+    </van-button>
+    <view style="width:100%;position: fixed;display: flex;flex-direction: row;bottom: 0;z-index:99;" 
+    wx:if="{{(active==3)&&(identity==2)}}">
+        <van-button 
+        style="flex:1;"
+        size="large" bindtap="record">
+            帮助记录
+        </van-button>
+        <van-button 
+        wx:if="{{updatePic==false}}"
+        style="flex:1;"
+        color="#FFC65B" size="large" bindtap="updatePicture">
+            上传证明图片
+        </van-button>
+        <van-button 
+        wx:if="{{updatePic}}"
+        style="flex:1;"
+        color="#FFC65B" size="large" bindtap="end">
+            结束帮助
+        </van-button>
+    </view>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==3)&&(identity==0)}}" disabled>
+        已有人帮助
+    </van-button>
+    <!--结果确认中-->
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==4)&&(identity==1)&&(state=='申诉中')}}" disabled>
+    申诉中
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==4)&&(identity==1)&&(state=='结果确认中')}}" bindtap="check_result">
+    帮助已完成，确认结果
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==4)&&(identity==2)}}" disabled>
+    等待请求人确认
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==4)&&(identity==0)}}" disabled>
+        已有人帮助
+    </van-button>
+    <!--互助达成-->
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==5)&&(identity!=0)}}" bindtap="help_check_result">
+        查看帮助记录
+    </van-button>
+    <van-button block 
+    style="position: fixed;z-index:99;bottom: 0;width: 100%;"
+    color="#FFC65B" size="large" wx:if="{{(active==5)&&(identity==0)}}" disabled>
+        互助达成
+    </van-button>

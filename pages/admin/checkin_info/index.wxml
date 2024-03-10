@@ -1,0 +1,8 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词"/>
+<block wx:for="{{resList}}" wx:key="index">
+  <van-cell title="{{item.res_name}}" label="{{item.res_phone}}">
+  <van-button color="#FFC65B" data-index="{{index}}" wx:if="{{item.isChecked==false}}" bindtap="checkin1">未签到</van-button>
+  <van-button data-index="{{index}}" wx:if="{{item.isChecked==true}}" bindtap="checkin2">已签到
+  </van-button>
+  </van-cell>
+</block>

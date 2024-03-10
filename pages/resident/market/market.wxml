@@ -1,0 +1,24 @@
+<!-- <van-sticky>
+  <van-dropdown-menu active-color="#FFB52A">
+  <van-dropdown-item bind:change="onSwitch1Change" value="{{ value1 }}" options="{{ option1 }}" >
+  </van-dropdown-item>
+  <van-dropdown-item bind:change="onSwitch2Change" value="{{ value2 }}" options="{{ option2 }}" >
+  </van-dropdown-item>
+  </van-dropdown-menu>
+</van-sticky> -->
+
+<van-cell-group wx:for="{{objList}}" wx:key="index" bindtap="gotodetail" data-id="{{item._id}}">
+    <view class="post-block">
+
+    <view class="post-container" >
+    <view class="post-title" style="margin: 16rpx 0 8rpx 10px">{{item.title}}</view>
+     <view class="post-content" style="margin: 14rpx 0 14rpx 10rpx;">{{item.time_limit}}</view>
+    </view>
+
+    </view>
+</van-cell-group>
+<!-- </view> -->
+
+<view bindtap='adddetial'>
+<image class="add_icon" src="../../../img/resident/add_object.png"/>
+</view>

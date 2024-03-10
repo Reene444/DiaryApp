@@ -1,0 +1,110 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <text class="tx">活动信息</text>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      type="textarea"
+      autosize
+      value="{{ name }}"
+      label="活动名"
+      title-width="6em"
+      readonly
+    />
+    <view style="word-break: break-all;">
+    <van-field
+      type="textarea"
+      autosize
+      title-width="6em"
+      readonly
+      value="{{ description }}"
+      label="活动描述"
+    /></view>
+    <van-cell title="开始时间" title-width="4em">
+      <view style="margin-right: 225rpx;margin-bottom: 20rpx;color: black;">
+        {{ start_date }}
+      </view>
+      <view style="margin-right: 305rpx;color: black;">
+        {{ start_time }}
+      </view>
+    </van-cell>
+    <van-field
+      value="{{ length }}"
+      label="活动时长"
+      title-width="6em"
+      readonly
+    />
+    <van-field
+      value="{{ scale }}"
+      label="活动规模"
+      title-width="6em"
+      readonly
+    />
+    <van-field
+      value="{{ limitation }}"
+      label="人数限制"
+      readonly
+    />
+    <van-field
+      bind:input="updateEpi_prevention"
+      value="{{ epi_prevention }}"
+      label="防疫要求"
+      title-width="6em"
+      readonly
+      type="textarea"
+      autosize
+    />
+    <van-field
+      value="{{ amount }}"
+      label="金额"
+      title-width="6em"
+      readonly
+    />
+  </van-cell-group>
+</view>
+
+<text class="tx">发起人信息</text>
+<view class="list">
+  <van-cell-group inset>
+    <van-field
+    value="{{ res_phone }}"
+    label="手机号"
+    readonly
+    title-width="6em"
+    />
+    <van-field
+      value="{{ res_name }}"
+      label="姓名"
+      readonly
+    title-width="6em"
+    />
+    <van-field
+      value="{{ res_gender }}"
+      label="性别"
+      readonly
+    title-width="6em"
+    />
+    <van-field
+      value="{{ res_birthday }}"
+      label="出生日期"
+      readonly
+    title-width="6em"
+    />
+    <van-field
+      value="{{ res_credit }}"
+      label="诚信分"
+      readonly
+    title-width="6em"
+    />
+    </van-cell-group>
+    </view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">不通过</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">通过</van-button>
+  </view>
+</view>

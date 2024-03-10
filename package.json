@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Atoms-H/Warminute-applet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atoms-H/Warminute-applet/issues"
+  },
+  "homepage": "https://github.com/Atoms-H/Warminute-applet#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.2"
+  }
+}

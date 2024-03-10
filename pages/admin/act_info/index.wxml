@@ -1,0 +1,115 @@
+<view class="father">
+  <image class="bg" src="../../../img/admin/bg_login.png"></image>
+  <view class="list">
+  <van-cell-group inset>
+    <van-field
+      bind:input="updateName"
+      value="{{ name }}"
+      label="活动名"
+      placeholder="请输入活动名"
+      maxlength="30"
+      title-width="6em"
+      show-word-limit
+      autosize
+    />
+    <view style="word-break: break-all;">
+    <van-field
+      bind:input="updateDescription"
+      type="textarea"
+      show-word-limit
+      maxlength="600"
+      title-width="6em"
+      autosize
+      value="{{ description }}"
+      label="活动描述"
+      placeholder="请输入活动描述"
+    /></view>
+    <van-cell title="开始时间">
+      <picker mode="date" value="{{start_date}}" bindchange="updateDate">
+      <view style="margin-right: 90rpx;margin-bottom: 20rpx;">
+        {{ start_date }}
+      </view>
+    </picker>
+    <picker mode="time" value="{{start_time}}" bindchange="updateTime">
+      <view style="margin-right: 140rpx;">
+        {{ start_time }}
+      </view>
+    </picker>
+    </van-cell>
+    <van-cell title="活动时长">
+    <view style="margin-right: 80rpx;">
+      <van-stepper value="{{ length }}" bind:change="updateLength" />
+    </view>
+    </van-cell>
+    <van-field
+      bind:input="updateLocation"
+      value="{{ location }}"
+      label="活动地点"
+      title-width="6em"
+      type="textarea"
+      autosize
+      input-align="center"
+      placeholder="请输入活动地点"
+    />
+    <van-cell title="活动规模" title-width="11.5em">
+    <van-radio-group
+     bind:change="updateScale"
+      name="活动规模"
+      value="{{scale}}"
+      direction="horizontal"
+    >
+    <van-radio name="小型" style="margin-bottom: 16rpx;">小型</van-radio>
+    <van-radio name="中型" style="margin-bottom: 16rpx;">中型</van-radio>
+    <van-radio name="大型">大型</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field
+      bind:input="updateLimitation"
+      value="{{ limitation }}"
+      label="人数限制"
+      placeholder="请输入人数限制"
+      input-align="center"
+    />
+    <van-cell title="活动状态" title-width="11em">
+    <van-radio-group
+     bind:change="updateState"
+      name="活动状态"
+      value="{{state}}"
+      direction="horizontal"
+    >
+    <van-radio name="审核中" style="margin-bottom: 16rpx;">审核中</van-radio>
+    <van-radio name="报名中" style="margin-bottom: 16rpx;">报名中</van-radio>
+    <van-radio name="活动中" style="margin-bottom: 16rpx;">活动中</van-radio>
+    <van-radio name="活动结束">活动完成</van-radio>
+    </van-radio-group>
+    </van-cell>
+    <van-field
+      bind:input="updateEpi_prevention"
+      value="{{ epi_prevention }}"
+      label="防疫要求"
+      show-word-limit
+      maxlength="200"
+      title-width="6em"
+      autosize
+      placeholder="请输入防疫要求"
+    />
+    <van-field
+      bind:input="updateAmount"
+      value="{{ amount }}"
+      label="金额"
+      placeholder="请输入金额"
+      input-align="center"
+    />
+  </van-cell-group>
+</view>
+</view>
+
+<view class="bt_gp">
+  <view class="bt2">
+  <van-button bindtap="deleteData" size="large">删除</van-button>
+  </view>
+  <view class="bt1">
+  <van-button bindtap="updateData" color="#FFC65B" size="large">修改</van-button>
+  </view>
+
+</view>

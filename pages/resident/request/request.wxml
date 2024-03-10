@@ -1,0 +1,42 @@
+
+<van-search value="{{ inputValue }}" class="search1" placeholder="请输入搜索关键词" background="#ffffff" shape="round"/>
+
+
+<van-toast id="van-toast"/>
+<view wx:if="{{show}}" bindtap="toEmergy">
+  <block class="post-container" wx:for="{{emerg_reqList}}" wx:key="index">
+    <view wx:if="{{index==0}}" bindtap="toEmergy">
+      <image class='bg' src='../../../img/resident/emergency.png'></image>
+      <view class="emg_container">
+      <view class="post-title">{{item.title}}</view>
+      <view class="post-content">{{item.content}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="req">
+  <van-sticky offset-top="{{ 40 }}">
+<van-dropdown-menu active-color="#FFB52A">
+  <van-dropdown-item bind:change="onSwitch1Change" value="{{ value1 }}" options="{{ option1 }}" >
+  </van-dropdown-item>
+  <van-dropdown-item bind:change="onSwitch2Change" value="{{ value2 }}" options="{{ option2 }}" >
+  </van-dropdown-item>
+</van-dropdown-menu>
+</van-sticky>
+<van-cell-group wx:for="{{reqList}}" wx:key="index">
+    <view class="post-block" data-index="{{index}}" bindtap="toReq">
+    <image class="post-pic" src="../../../img/resident/pic.png" />
+    <view class="post-container">
+    <view class="post-title" style="margin: 16rpx 0 8rpx 10rpx">{{item.title}} <van-tag color="#FFC65B" wx:if="{{item.isUrgent==true}}">紧急</van-tag></view>
+    <view class="post-content" style="margin: 0 0 14rpx 10rpx;">{{item.content}}</view>
+    <view class="post-state" style="margin: 0 0 14rpx 10rpx;">当前状态：{{item.state}}</view>
+    </view>
+
+    </view>
+
+</van-cell-group>
+</view>
+<view bindtap='adddetial'>
+<image class="add_icon" src="../../../img/resident/add_request.png"/>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/resident/others/account/account.wxml-->
+<view class="father">
+<image class="bg" src="../../../../img/resident/bg_login.png"></image>
+<view class="list">
+<van-cell-group inset>
+  <van-cell title="手机号" value="{{phone}}" />
+  <van-cell title="修改密码" is-link link-type="navigateTo" url="/pages/resident/others/account/password/password"/>
+</van-cell-group>
+</view>
+<view class="bt1">
+  <van-button bindtap="logout" type="default" size="large">退出登录</van-button>
+</view>
+<!-- <view class="list">
+<van-cell-group inset>
+  <van-cell title="切换账号" center link-type="navigateTo" url="/pages/index/index?relogin=1"  />
+  <van-cell title="退出登录" bindtap="logout"/>
+</van-cell-group>
+</view> -->
+</view>
+
+

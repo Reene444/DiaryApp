@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "活动签到",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

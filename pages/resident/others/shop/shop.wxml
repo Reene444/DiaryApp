@@ -1,0 +1,39 @@
+<view class="father">
+    <image class="bg" src="../../../../img/resident/bg_login.png"></image>
+    <view class="main">
+    <view class="tx1">请求卡数量：初级 {{primary_card}} 中级 {{middle_card}} 高级 {{advanced_card}}</view>
+    <view class="tx2">馨币总值：{{amount}}</view>
+    <view class="list">
+
+    <view style="margin-top: 25rpx;">
+    <van-cell-group inset>
+        <van-cell title="购买请求卡" size="large"/>
+            <van-grid column-num="3">
+                <van-grid-item icon="credit-pay" icon-color="#a9defd" bind:click="click_card"center text="初级" data-value="primary_card"/>
+                <van-grid-item icon="credit-pay" icon-color="#63C6FF" bind:click="click_card"center text="中级" data-value="middle_card"/>
+                <van-grid-item icon="credit-pay" icon-color="#17a1f1" bind:click="click_card"center text="高级" data-value="advanced_card"/>
+            </van-grid>
+    </van-cell-group>
+    </view>
+    <view style="margin-top: 50rpx;">
+    <van-cell-group inset>
+        <van-cell title="馨币充值" size="large"/>
+            <van-grid column-num="3">
+                <van-grid-item icon="balance-o" icon-color="#fde4b6"
+                bind:click="click_xin"center text="10元" data-value="10"/>
+                <van-grid-item icon="balance-o" icon-color="#fcda9d"
+                bind:click="click_xin"center text="20元" data-value="20"/>
+                <van-grid-item icon="balance-o" icon-color="#ffcf75"
+                bind:click="click_xin"center text="50元" data-value="50"/>
+                <van-grid-item icon="balance-o" icon-color="#FFC65B"
+                bind:click="click_xin"center text="100元"data-value="100" />
+                <van-grid-item icon="balance-o" icon-color="#fdaf1f"
+                bind:click="click_xin"center text="200元"data-value="200" />
+                <van-grid-item icon="balance-o" icon-color="#ffa600"
+                bind:click="click_xin"center text="300元"data-value="300" />
+            </van-grid>
+    </van-cell-group>
+    </view>
+    </view>
+    </view>
+</view>
