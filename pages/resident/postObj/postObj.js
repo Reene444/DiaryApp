@@ -107,12 +107,12 @@ Page({
     let that=this //一定要在外面写
     //弹出提示框
     wx.showModal({
-      title: "确认提示", // 提示的标题
-      content: "确认提交该物品？", // 提示的内容
+      title: "Confirm", // 提示的标题
+      content: "Comfirm to post？", // 提示的内容
       showCancel: true, // 是否显示取消按钮，默认true
-      cancelText: "取消", // 取消按钮的文字，最多4个字符
+      cancelText: "cancel", // 取消按钮的文字，最多4个字符
       cancelColor: "#000000", // 取消按钮的文字颜色，必须是16进制格式的颜色字符串
-      confirmText: "确定", // 确认按钮的文字，最多4个字符
+      confirmText: "confirm", // 确认按钮的文字，最多4个字符
       confirmColor: "#FFC65B", // 确认按钮的文字颜色，必须是 16 进制格式的颜色字符串
       success: function (res) {
         if (res.confirm) {

@@ -32,6 +32,6 @@
     <!--等待购买中-->
     <van-button block 
     style="position: fixed;z-index:99;bottom: 0;width: 100%;"
-    color="#FFC65B" size="large" wx:if="{{(active==0)&&(identity!=1)}}" bindtap="buy">
-        edit
+    color="#FFC65B" size="large"  bindtap="delete">
+        delete
     </van-button>

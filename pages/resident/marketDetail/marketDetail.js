@@ -73,7 +73,38 @@ Page({
 
         
     },
+    delete: function (options) {
+      let myWhere={
+         _id:this.data.obj._id
+      }
+       console.log(this.data.obj._id)
+        //-物品信息
+        wx.cloud.callFunction({
+         name: 'com',
+         data:{
+            type:'delete',
+            collection:'diary',
+            myWhere:myWhere
+         }
+       })
+       .then(res => {
+         console.log("获取数据成功", res)
+         wx.showToast({
+            title: 'delete success',
+            icon: 'success'
+          })
+       })
+       .catch(res=>{
+         console.log("获取数据失败", res)
+         wx.showToast({
+            title: 'error',
+            icon: 'error'
+          })
+       })
 
+
+        
+    },
 
     /*
     //等待购买中：物品发布者，“等待购买”，不可点击

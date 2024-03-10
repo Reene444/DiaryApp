@@ -1,7 +1,7 @@
 const DB=wx.cloud.database().collection("activity");
 const app=getApp();
 let title=''; //活动名
-let promoter=''; //发起人编号
+let user_id=''; //发起人编号
 let description=''; //活动描述
 let start_date=''; //开始日期
 let start_time=''; //开始时间
@@ -22,7 +22,7 @@ Page({
     lim_st_d:'',
     lim_st_t:'',
     title:'',
-    promoter:'',
+    user_id:'',
     description:'',
     start_date:'',
     start_time:'',
@@ -66,10 +66,10 @@ Page({
 
   onLoad: function(options){
     this.setToday();
-    promoter=app.globalData.res_phone
-    console.log(promoter)
+    user_id=app.globalData.res_phone
+    console.log(user_id)
     this.setData({
-      promoter:promoter
+      user_id:user_id
     })
   },
 
@@ -115,16 +115,15 @@ Page({
         icon: 'error'
       })
     } else {
-    console.log(promoter)
+    console.log(user_id)
     start_time=stringToDate(start_date,start_time)
     //弹出提示框
     wx.showModal({
-      title: "确认提示", // 提示的标题
-      content: "确认发布该活动？提交后将等待管理员审核", // 提示的内容
+      title: "Confirm", // 提示的标题
       showCancel: true, // 是否显示取消按钮，默认true
-      cancelText: "取消", // 取消按钮的文字，最多4个字符
+      cancelText: "cancel", // 取消按钮的文字，最多4个字符
       cancelColor: "#000000", // 取消按钮的文字颜色，必须是16进制格式的颜色字符串
-      confirmText: "确定", // 确认按钮的文字，最多4个字符
+      confirmText: "confirm", // 确认按钮的文字，最多4个字符
       confirmColor: "#FFC65B", // 确认按钮的文字颜色，必须是 16 进制格式的颜色字符串
       success: function (res) {
         if (res.confirm) {
@@ -132,7 +131,7 @@ Page({
               name: 'add_act',
               data:{
                 title:title,
-                promoter:promoter,
+                user_id:app.globalData.res_phone,
                 description:description,
                 start_time:start_time,
                
@@ -144,7 +143,7 @@ Page({
             .then(res => {
                 console.log("添加成功", res)
                 wx.showToast({
-                  title: '发布成功',
+                  title: 'success',
                   icon: 'success',
                 })
               })

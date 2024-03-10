@@ -47,8 +47,8 @@
       direction="horizontal"
       title-width="5em"
     >
-    <van-radio name="小型">normal</van-radio>
-    <van-radio name="大型">important</van-radio>
+    <van-radio name="normal">normal</van-radio>
+    <van-radio name="important">important</van-radio>
     </van-radio-group>
     </van-cell>
     <van-field

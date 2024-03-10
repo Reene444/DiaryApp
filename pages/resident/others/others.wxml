@@ -6,11 +6,10 @@
       </view>
     <view class="info">
   
-      <view class="name">昵称：{{res_name}}</view>
+      <view class="name">Nick name：{{res_name}}</view>
       <!-- <view wx:else><open-data type="userNickName"></open-data></view>
       </view> -->
-      <text class="phone">手机号：{{res_phone}}</text>
-      <text class="amount">馨币：{{res_amount}}</text> 
+      <text class="phone">Phone number：{{res_phone}}</text>
     </view>
   </view>
 

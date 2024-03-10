@@ -7,7 +7,7 @@ const DB=cloud.database().collection('activity')
 // 云函数入口函数
 exports.main = async (event, context) => {
   let title=event.title
-  let promoter=event.promoter
+  let user_id=event.user_id
   let description=event.description
   let start_time=new Date(event.start_time)
   let location=event.location
@@ -18,7 +18,7 @@ exports.main = async (event, context) => {
   .add({
     data:{
       title: title,
-      promoter: promoter,
+      user_id: user_id,
       description: description,
       start_time: start_time,
       location:location,

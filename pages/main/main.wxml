@@ -1,6 +1,6 @@
 <view class="father">
   <image class="bg" src="../../img/login/bg_login.png"></image>
-  <view class="title">Welcome to HackTime</view>
+  <view class="title">Welcome to HackDiary</view>
 
   <image class="logo" src="../../img/login/logo.png"></image>
   <view class="bt_res">
